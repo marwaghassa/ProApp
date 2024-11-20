@@ -234,22 +234,6 @@ JOIN Bid ON Task.T_ID = Bid.T_ID
 WHERE Task.SelectionTime IS NOT NULL
 ORDER BY HoursToSelectBid DESC;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- Query 4 
 SELECT ServiceType, COUNT(T_ID) AS TotalTasks,
        SUM(CASE WHEN T_Status = 'Open' THEN 1 ELSE 0 END) AS CancelledTasks,
